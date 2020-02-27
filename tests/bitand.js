@@ -1,4 +1,4 @@
-const { sum, floor, mod, round, pow, log } = require("./src/Lib/Equation");
+const { sum, floor, mod, round, pow, log } = require("../wrapper/functions.js");
 // disrupting the wrapper
 
 const bitand = (x, y) => {
