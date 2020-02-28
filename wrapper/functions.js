@@ -7,11 +7,16 @@ const sum = (n, x, k) => {
     // end loop
 }
 
+const positive = n => n < 0 ? n * - 1 : n;
+
 const floor = n => ~~n;
 // (double tilde) not operator => fast floor
 const mod = (n1, n2) => n1 % n2;
 // (module operator) arithmetic operator => returns the remaing integer of the division
 const round = n => mod(n, 1) > 0.5 ? floor(n + 1) : floor(n);
+const roundMiddle = n => mod(n, 1) > 0.4 ? floor(n + 1) : floor(n);
+const roundNegative = n => mod(positive(n), 1) > 0.5 ? floor(n - 1) : floor(n);
+const roundNegativeMiddle = n => mod(positive(n), 1) > 0.4 ? floor(n - 1) : floor(n);
 // (ternary operator) conditional operator => if shortcut
 const pow = (n1, n2) => n1 ** n2;
 // (exponential operator) arithmetic operator => returns the first number to the power of the second number
@@ -23,6 +28,9 @@ module.exports = {
     floor,
     mod,
     round,
+    roundMiddle,
+    roundNegative,
+    roundNegativeMiddle,
     pow,
     log
 };
