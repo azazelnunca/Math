@@ -14,9 +14,6 @@ const floor = n => ~~n;
 const mod = (n1, n2) => n1 % n2;
 // (module operator) arithmetic operator => returns the remaing integer of the division
 const round = n => mod(n, 1) > 0.5 ? floor(n + 1) : floor(n);
-const roundMiddle = n => mod(n, 1) > 0.4 ? floor(n + 1) : floor(n);
-const roundNegative = n => mod(positive(n), 1) > 0.5 ? floor(n - 1) : floor(n);
-const roundNegativeMiddle = n => mod(positive(n), 1) > 0.4 ? floor(n - 1) : floor(n);
 // (ternary operator) conditional operator => if shortcut
 const pow = (n1, n2) => n1 ** n2;
 // (exponential operator) arithmetic operator => returns the first number to the power of the second number
